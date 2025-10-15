@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Axel Bénard - Portfolio</title>
+    <title>Axel Bénard - Développeur</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,14 +14,14 @@
 
     <nav id="navbar">
         <div class="container">
-            <div class="logo">AB.</div>
+            <div class="logo">AB<span class="blink">_</span></div>
             <ul>
-                <li><a href="#hero">Accueil</a></li>
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#experience">Expériences</a></li>
-                <li><a href="#projects">Projets</a></li>
-                <li><a href="#skills">Compétences</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#hero">accueil</a></li>
+                <li><a href="#about">à propos</a></li>
+                <li><a href="#experience">parcours</a></li>
+                <li><a href="#projects">projets</a></li>
+                <li><a href="#skills">compétences</a></li>
+                <li><a href="#contact">contact</a></li>
             </ul>
         </div>
     </nav>
@@ -26,12 +29,15 @@
     <section id="hero">
         <div class="container">
             <div class="hero-content">
-                <h1 class="fade-in">Axel Bénard</h1>
-                <p class="subtitle fade-in">Développeur C#/.NET</p>
-                <p class="fade-in">Étudiant en BUT Informatique passionné par le développement d'applications et les nouvelles technologies</p>
-                <div class="cta-buttons fade-in">
-                    <a href="#projects" class="btn">Voir mes projets</a>
-                    <a href="#contact" class="btn btn-outline">Me contacter</a>
+                <div class="terminal-text">
+                    <p class="comment">// Bienvenue sur mon portfolio</p>
+                    <h1>Axel Bénard</h1>
+                    <p class="subtitle"><span class="keyword">const</span> role = <span class="string">"Développeur"</span>;</p>
+                </div>
+                <p class="description">Étudiant en BUT Informatique passionné par le développement d'applications et les nouvelles technologies</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn">voir_mes_projets()</a>
+                    <a href="#contact" class="btn btn-outline">me_contacter()</a>
                 </div>
             </div>
         </div>
@@ -39,38 +45,49 @@
 
     <section id="about">
         <div class="container">
-            <h2 class="section-title">À propos</h2>
+            <h2 class="section-title"><span class="comment">//</span> À propos</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <h3>Qui suis-je ?</h3>
-                    <p>Étudiant en 2ème année de BUT Informatique à l'IUT d'Annecy, je me spécialise dans le développement d'applications C#/.NET. Passionné par la programmation et les technologies du web, j'aime créer des solutions efficaces et élégantes.</p>
-                    <p>Après une classe préparatoire MP2I au Lycée Berthollet, j'ai choisi de m'orienter vers un parcours plus pratique et professionnalisant qui correspond parfaitement à mes aspirations.</p>
-                    <p>Actuellement à la recherche d'un stage de BUT2 pour mettre en pratique mes compétences et continuer à progresser dans le développement logiciel.</p>
+                    <div class="code-block">
+                        <p class="code-line"><span class="keyword">class</span> <span class="class-name">Developer</span> {</p>
+                        <p class="code-line indent">  <span class="property">nom</span>: <span class="string">"Axel Bénard"</span>,</p>
+                        <p class="code-line indent">  <span class="property">âge</span>: <span class="number">20</span>,</p>
+                        <p class="code-line indent">  <span class="property">localisation</span>: <span class="string">"Annecy, France"</span>,</p>
+                        <p class="code-line indent">  <span class="property">formation</span>: <span class="string">"BUT Informatique (2ème année)"</span>,</p>
+                        <p class="code-line indent">  <span class="property">langues</span>: [<span class="string">"Français"</span>, <span class="string">"Anglais (C1)"</span>, <span class="string">"Espagnol (B1)"</span>]</p>
+                        <p class="code-line">}</p>
+                    </div>
+                    <p class="bio">Après une classe préparatoire MP2I, je me suis orienté vers un parcours plus pratique en BUT Informatique à l'IUT d'Annecy. Je m'intéresse particulièrement au développement d'applications et j'explore différents domaines de la programmation.</p>
+                    <p class="bio">Actuellement en recherche d'un stage de BUT2 pour approfondir mes compétences et découvrir le monde professionnel du développement.</p>
                 </div>
                 <div class="info-grid">
                     <div class="info-item">
-                        <strong>Âge</strong>
-                        <span>20 ans</span>
+                        <span class="icon">📧</span>
+                        <div>
+                            <strong>Email</strong>
+                            <p>axel.benard@etu.univ-smb.fr</p>
+                        </div>
                     </div>
                     <div class="info-item">
-                        <strong>Localisation</strong>
-                        <span>Annecy, France</span>
+                        <span class="icon">📱</span>
+                        <div>
+                            <strong>Téléphone</strong>
+                            <p>07 68 73 50 59</p>
+                        </div>
                     </div>
                     <div class="info-item">
-                        <strong>Email</strong>
-                        <span>axel.benard@etu.univ-smb.fr</span>
+                        <span class="icon">💼</span>
+                        <div>
+                            <strong>LinkedIn</strong>
+                            <p><a href="https://linkedin.com/in/axel-bénard" target="_blank">@axel-bénard</a></p>
+                        </div>
                     </div>
                     <div class="info-item">
-                        <strong>Téléphone</strong>
-                        <span>07 68 73 50 59</span>
-                    </div>
-                    <div class="info-item">
-                        <strong>Langues</strong>
-                        <span>Anglais (C1), Espagnol (B1)</span>
-                    </div>
-                    <div class="info-item">
-                        <strong>Permis</strong>
-                        <span>Permis B + Plaisance côtier</span>
+                        <span class="icon">📍</span>
+                        <div>
+                            <strong>Localisation</strong>
+                            <p>Annecy, France</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -79,31 +96,12 @@
 
     <section id="experience">
         <div class="container">
-            <h2 class="section-title">Formation & Expériences</h2>
+            <h2 class="section-title"><span class="comment">//</span> Parcours</h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <h3>BUT Informatique - 2ème année</h3>
-                    <p class="date">2024 - 2027 | IUT Annecy</p>
+                    <p class="date">2024 - 2027 | IUT Annecy - Université Savoie Mont Blanc</p>
                     <p>Parcours Réalisation d'applications : conception, développement, validation</p>
-                </div>
-                <div class="timeline-item">
-                    <h3>Projet Application .NET/C# - Pilot</h3>
-                    <p class="date">2024 - 2025 | Projet académique</p>
-                    <ul>
-                        <li>Conception et développement d'une application WPF en C#</li>
-                        <li>Analyse de l'existant et documentation technique</li>
-                        <li>Modélisation UML et développement .NET</li>
-                        <li>Collaboration en équipe avec GitHub</li>
-                    </ul>
-                </div>
-                <div class="timeline-item">
-                    <h3>Projet WordPress - Site Web</h3>
-                    <p class="date">2024 | Projet scolaire</p>
-                    <ul>
-                        <li>Construction complète d'un site web sous WordPress</li>
-                        <li>Gestion de thèmes et plugins</li>
-                        <li>Optimisation des performances</li>
-                    </ul>
                 </div>
                 <div class="timeline-item">
                     <h3>Classe Préparatoire MP2I</h3>
@@ -111,9 +109,14 @@
                     <p>Formation intensive en mathématiques et informatique</p>
                 </div>
                 <div class="timeline-item">
+                    <h3>Baccalauréat Général - Mention Bien</h3>
+                    <p class="date">2023</p>
+                    <p>Spécialités Mathématiques et NSI - Option Mathématiques Expertes</p>
+                </div>
+                <div class="timeline-item">
                     <h3>Missions intérimaires industrielles</h3>
                     <p class="date">Étés 2024 - 2025 | Crit Intérim, Oyonnax</p>
-                    <p>Travail en usine - Rigueur, respect des délais et travail en équipe</p>
+                    <p>Expérience en milieu industriel : rigueur, respect des délais et travail en équipe</p>
                 </div>
             </div>
         </div>
@@ -121,37 +124,47 @@
 
     <section id="projects">
         <div class="container">
-            <h2 class="section-title">Projets</h2>
+            <h2 class="section-title"><span class="comment">//</span> Projets</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-icon">💻</div>
+                    <div class="project-header">
+                        <span class="project-icon">📦</span>
+                        <span class="project-status">En cours</span>
+                    </div>
                     <h3>Application WPF - Pilot</h3>
-                    <p>Développement d'une application desktop en C# avec .NET Framework. Utilisation de WPF pour l'interface utilisateur et modélisation UML complète du projet.</p>
-                    <div class="project-tags">
-                        <span class="tag">C#</span>
-                        <span class="tag">.NET</span>
-                        <span class="tag">WPF</span>
-                        <span class="tag">UML</span>
+                    <p>Développement d'une application desktop en C# avec .NET Framework. Conception UML complète, développement en équipe avec gestion de versions sur GitHub.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">.NET</span>
+                        <span class="tech-tag">WPF</span>
+                        <span class="tech-tag">UML</span>
+                        <span class="tech-tag">GitHub</span>
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-icon">🌐</div>
+                    <div class="project-header">
+                        <span class="project-icon">🌐</span>
+                        <span class="project-status completed">Terminé</span>
+                    </div>
                     <h3>Site Web WordPress</h3>
-                    <p>Conception et réalisation d'un site web complet avec WordPress. Personnalisation du thème, intégration de plugins et optimisation SEO.</p>
-                    <div class="project-tags">
-                        <span class="tag">WordPress</span>
-                        <span class="tag">PHP</span>
-                        <span class="tag">CSS</span>
+                    <p>Construction complète d'un site web avec WordPress. Gestion de thèmes, personnalisation de plugins et optimisation des performances.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">WordPress</span>
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">CSS</span>
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-icon">🎯</div>
+                    <div class="project-header">
+                        <span class="project-icon">💼</span>
+                        <span class="project-status">En cours</span>
+                    </div>
                     <h3>Portfolio Personnel</h3>
-                    <p>Création de ce portfolio moderne et interactif avec HTML, CSS et JavaScript. Design sombre avec animations fluides et interface responsive.</p>
-                    <div class="project-tags">
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">JavaScript</span>
+                    <p>Création d'un portfolio moderne et interactif avec HTML, CSS et JavaScript. Design épuré avec animations fluides et interface responsive.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
                     </div>
                 </div>
             </div>
@@ -160,25 +173,34 @@
 
     <section id="skills">
         <div class="container">
-            <h2 class="section-title">Compétences</h2>
+            <h2 class="section-title"><span class="comment">//</span> Compétences</h2>
             <div class="skills-container">
                 <div class="skill-category">
-                    <h3>Développement .NET</h3>
+                    <h3><span class="bracket">{</span> Développement .NET <span class="bracket">}</span></h3>
                     <div class="skill-list">
                         <div class="skill-item">
-                            <span>C# / .NET</span>
+                            <div class="skill-info">
+                                <span>C# / .NET</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-progress="85"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span>WPF</span>
+                            <div class="skill-info">
+                                <span>WPF</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-progress="75"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span>UML</span>
+                            <div class="skill-info">
+                                <span>UML</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-progress="80"></div>
                             </div>
@@ -186,28 +208,40 @@
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Développement Web</h3>
+                    <h3><span class="bracket">{</span> Développement Web <span class="bracket">}</span></h3>
                     <div class="skill-list">
                         <div class="skill-item">
-                            <span>HTML / CSS</span>
+                            <div class="skill-info">
+                                <span>HTML / CSS</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-progress="90"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span>JavaScript</span>
+                            <div class="skill-info">
+                                <span>JavaScript</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-progress="80"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span>PHP</span>
+                            <div class="skill-info">
+                                <span>PHP</span>
+                                <span class="skill-percent">70%</span>
+                            </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-progress="70"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span>WordPress</span>
+                            <div class="skill-info">
+                                <span>WordPress</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-progress="75"></div>
                             </div>
@@ -215,22 +249,31 @@
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Autres Compétences</h3>
+                    <h3><span class="bracket">{</span> Autres <span class="bracket">}</span></h3>
                     <div class="skill-list">
                         <div class="skill-item">
-                            <span>SQL</span>
+                            <div class="skill-info">
+                                <span>SQL / PostgreSQL</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-progress="75"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span>Python</span>
+                            <div class="skill-info">
+                                <span>Python</span>
+                                <span class="skill-percent">70%</span>
+                            </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-progress="70"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span>Git / GitHub</span>
+                            <div class="skill-info">
+                                <span>Git / GitHub</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-progress="85"></div>
                             </div>
@@ -243,58 +286,27 @@
 
     <section id="contact">
         <div class="container">
-            <h2 class="section-title">Contact</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Restons en contact</h3>
-                    <p>Je suis actuellement à la recherche d'un stage de BUT2 en développement. N'hésitez pas à me contacter pour discuter d'opportunités ou simplement échanger !</p>
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <span class="icon">📧</span>
-                            <div>
-                                <strong>Email</strong>
-                                <p>axel.benard@etu.univ-smb.fr</p>
-                            </div>
-                        </div>
-                        <div class="contact-method">
-                            <span class="icon">📱</span>
-                            <div>
-                                <strong>Téléphone</strong>
-                                <p>07 68 73 50 59</p>
-                            </div>
-                        </div>
-                        <div class="contact-method">
-                            <span class="icon">💼</span>
-                            <div>
-                                <strong>LinkedIn</strong>
-                                <p><a href="https://linkedin.com/in/axel-bénard" target="_blank">linkedin.com/in/axel-bénard</a></p>
-                            </div>
-                        </div>
-                        <div class="contact-method">
-                            <span class="icon">📍</span>
-                            <div>
-                                <strong>Localisation</strong>
-                                <p>Annecy, France</p>
-                            </div>
-                        </div>
-                    </div>
+            <h2 class="section-title"><span class="comment">//</span> Contact</h2>
+            <div class="contact-simple">
+                <div class="terminal-contact">
+                    <p class="code-line"><span class="keyword">function</span> <span class="function-name">getContact</span>() {</p>
+                    <p class="code-line indent">  <span class="keyword">return</span> {</p>
+                    <p class="code-line indent2">    email: <span class="string">"axel.benard@etu.univ-smb.fr"</span>,</p>
+                    <p class="code-line indent2">    phone: <span class="string">"07 68 73 50 59"</span>,</p>
+                    <p class="code-line indent2">    linkedin: <span class="string">"linkedin.com/in/axel-bénard"</span>,</p>
+                    <p class="code-line indent2">    location: <span class="string">"Annecy, France"</span></p>
+                    <p class="code-line indent">  };</p>
+                    <p class="code-line">}</p>
                 </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <input type="text" placeholder="Votre nom" required>
-                        <input type="email" placeholder="Votre email" required>
-                        <textarea placeholder="Votre message" rows="5" required></textarea>
-                        <button type="submit" class="btn">Envoyer le message</button>
-                    </form>
-                </div>
+                <p class="contact-message">N'hésitez pas à me contacter pour discuter d'opportunités de stage ou de collaboration !</p>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Axel Bénard. Tous droits réservés.</p>
-            <p>Développeur C#/.NET | Étudiant BUT Informatique</p>
+            <p><span class="comment">// </span>© 2025 Axel Bénard</p>
+            <p>Étudiant BUT Informatique - IUT Annecy</p>
         </div>
     </footer>
 
