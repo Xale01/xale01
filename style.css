@@ -442,6 +442,10 @@ section {
     flex-wrap: wrap;
 }
 
+.project-date {
+    font-style: italic;
+}
+
 .tech-tag {
     background: rgba(88, 166, 255, 0.1);
     color: var(--accent);
