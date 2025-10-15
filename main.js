@@ -44,10 +44,10 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Animation des éléments au scroll
+// Animation des éléments au scroll avec IntersectionObserver
 const observerOptions = {
-    threshold: 0.2,
-    rootMargin: '0px 0px -100px 0px'
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -69,46 +69,25 @@ document.querySelectorAll('.project-card').forEach(card => {
 });
 
 // Animation des barres de compétences
+const skillsSection = document.getElementById('skills');
+
 const skillObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            const progressBars = entry.target.querySelectorAll('.skill-progress');
+            const progressBars = document.querySelectorAll('.skill-progress');
             progressBars.forEach(bar => {
                 const progress = bar.getAttribute('data-progress');
-                bar.style.setProperty('--progress', progress + '%');
-                bar.classList.add('animate');
+                setTimeout(() => {
+                    bar.style.width = progress + '%';
+                }, 200);
             });
             skillObserver.unobserve(entry.target);
         }
     });
-}, { threshold: 0.5 });
+}, { threshold: 0.3 });
 
-const skillsSection = document.getElementById('skills');
 if (skillsSection) {
     skillObserver.observe(skillsSection);
-}
-
-// Gestion du formulaire de contact
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // Simuler l'envoi du formulaire
-        const button = contactForm.querySelector('.btn');
-        const originalText = button.textContent;
-        button.textContent = 'Envoi en cours...';
-        button.disabled = true;
-        
-        setTimeout(() => {
-            button.textContent = 'Message envoyé !';
-            setTimeout(() => {
-                button.textContent = originalText;
-                button.disabled = false;
-                contactForm.reset();
-            }, 2000);
-        }, 1500);
-    });
 }
 
 // Effet de parallaxe léger sur le hero
