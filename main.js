@@ -1,40 +1,46 @@
 // Effet de curseur lumineux
 const cursorGlow = document.getElementById('cursorGlow');
-let mouseX = 0;
-let mouseY = 0;
-let glowX = 0;
-let glowY = 0;
 
-document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-});
+if (cursorGlow) {
+    let mouseX = 0;
+    let mouseY = 0;
+    let glowX = 0;
+    let glowY = 0;
 
-function animateGlow() {
-    glowX += (mouseX - glowX) * 0.1;
-    glowY += (mouseY - glowY) * 0.1;
-    cursorGlow.style.left = glowX + 'px';
-    cursorGlow.style.top = glowY + 'px';
-    requestAnimationFrame(animateGlow);
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+
+    function animateGlow() {
+        glowX += (mouseX - glowX) * 0.1;
+        glowY += (mouseY - glowY) * 0.1;
+        cursorGlow.style.left = glowX + 'px';
+        cursorGlow.style.top = glowY + 'px';
+        requestAnimationFrame(animateGlow);
+    }
+
+    animateGlow();
 }
-
-animateGlow();
 
 // Navigation sticky
 const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-});
+if (navbar) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+}
 
 // Smooth scroll pour les liens de navigation
 document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const targetId = this.getAttribute('href');
+        const target = document.querySelector(targetId);
         if (target) {
             target.scrollIntoView({
                 behavior: 'smooth',
@@ -44,86 +50,51 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Animation des éléments au scroll avec IntersectionObserver
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
-    });
-}, observerOptions);
-
-// Observer les éléments de la timeline
-document.querySelectorAll('.timeline-item').forEach(item => {
-    observer.observe(item);
-});
-
-// Observer les cartes de projets
-document.querySelectorAll('.project-card').forEach(card => {
-    observer.observe(card);
-});
-
-// Animation des barres de compétences
+// Animation des barres de compétences au scroll
 const skillsSection = document.getElementById('skills');
-
-const skillObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const progressBars = document.querySelectorAll('.skill-progress');
-            progressBars.forEach(bar => {
-                const progress = bar.getAttribute('data-progress');
-                setTimeout(() => {
-                    bar.style.width = progress + '%';
-                }, 200);
-            });
-            skillObserver.unobserve(entry.target);
+if (skillsSection) {
+    let skillsAnimated = false;
+    
+    window.addEventListener('scroll', () => {
+        if (!skillsAnimated) {
+            const rect = skillsSection.getBoundingClientRect();
+            const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+            
+            if (isVisible) {
+                const progressBars = document.querySelectorAll('.skill-progress');
+                progressBars.forEach(bar => {
+                    const progress = bar.getAttribute('data-progress');
+                    if (progress) {
+                        bar.style.width = progress + '%';
+                    }
+                });
+                skillsAnimated = true;
+            }
         }
     });
-}, { threshold: 0.3 });
-
-if (skillsSection) {
-    skillObserver.observe(skillsSection);
 }
-
-// Effet de parallaxe léger sur le hero
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const hero = document.getElementById('hero');
-    if (hero && scrolled < window.innerHeight) {
-        hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-        hero.style.opacity = 1 - (scrolled / window.innerHeight);
-    }
-});
 
 // Détection de la section active dans la navigation
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('nav a[href^="#"]');
 
-window.addEventListener('scroll', () => {
-    let current = '';
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (window.pageYOffset >= sectionTop - 200) {
-            current = section.getAttribute('id');
-        }
+if (sections.length > 0 && navLinks.length > 0) {
+    window.addEventListener('scroll', () => {
+        let current = '';
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (window.pageYOffset >= sectionTop - 200) {
+                current = section.getAttribute('id');
+            }
+        });
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            const href = link.getAttribute('href');
+            if (href === '#' + current) {
+                link.classList.add('active');
+            }
+        });
     });
-    
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === '#' + current) {
-            link.classList.add('active');
-        }
-    });
-});
-
-// Animation au chargement de la page
-window.addEventListener('load', () => {
-    document.body.style.opacity = '1';
-});
+}
