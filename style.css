@@ -527,6 +527,40 @@ footer p {
     font-size: 0.9rem;
 }
 
+.project-links {
+    margin-top: 1.25rem; /* Espace entre les tags et le(s) bouton(s) */
+    display: flex;
+    gap: 0.75rem; /* Espace si tu mets plusieurs boutons (ex: code + démo) */
+}
+
+.btn-link {
+    /* On s'inspire de .btn-outline mais en plus petit */
+    padding: 0.4rem 0.8rem;
+    color: var(--text-secondary); /* Un peu plus discret */
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s;
+    border: 1px solid var(--border);
+    font-size: 0.8rem;
+    background: transparent;
+    font-family: 'JetBrains Mono', monospace; /* Garder la police */
+}
+
+.btn-link:hover {
+    background: var(--bg-hover); /* Même fond que la carte au survol */
+    color: var(--accent); /* Couleur d'accentuation */
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+
+.icon img {
+  width: 24px; /* ou 24px, 40px... selon ton design */
+  height: auto;
+  vertical-align: middle; /* optionnel : aligne bien avec le texte */
+}
+
 @media (max-width: 768px) {
     body {
         font-size: 13px;
@@ -686,9 +720,4 @@ footer p {
     .cursor-glow {
         display: none;
     }
-}
-.icon img {
-  width: 24px; /* ou 24px, 40px... selon ton design */
-  height: auto;
-  vertical-align: middle; /* optionnel : aligne bien avec le texte */
 }
