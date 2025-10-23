@@ -50,30 +50,6 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Animation des barres de compétences au scroll
-const skillsSection = document.getElementById('skills');
-if (skillsSection) {
-    let skillsAnimated = false;
-    
-    window.addEventListener('scroll', () => {
-        if (!skillsAnimated) {
-            const rect = skillsSection.getBoundingClientRect();
-            const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-            
-            if (isVisible) {
-                const progressBars = document.querySelectorAll('.skill-progress');
-                progressBars.forEach(bar => {
-                    const progress = bar.getAttribute('data-progress');
-                    if (progress) {
-                        bar.style.width = progress + '%';
-                    }
-                });
-                skillsAnimated = true;
-            }
-        }
-    });
-}
-
 // Détection de la section active dans la navigation
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('nav a[href^="#"]');
