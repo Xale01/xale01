@@ -699,3 +699,8 @@ footer p {
         display: none;
     }
 }
+.icon img {
+  width: 32px; /* ou 24px, 40px... selon ton design */
+  height: auto;
+  vertical-align: middle; /* optionnel : aligne bien avec le texte */
+}
