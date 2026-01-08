@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Axel Bénard - Développeur</title>
+    <title>Axel Bénard - Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐙</text></svg>">
-
 </head>
 <body>
     <div class="cursor-glow" id="cursorGlow"></div>
@@ -18,29 +16,30 @@
         <div class="container">
             <div class="logo">AB<span class="blink">_</span></div>
             <ul>
-                <li><a href="#hero">accueil</a></li>
-                <li><a href="#about">à propos</a></li>
-                <li><a href="#experience">formation</a></li>
-                <li><a href="#work">expérience</a></li>
-                <li><a href="#projects">projets</a></li>
-                <li><a href="#skills">compétences</a></li>
+                <li><a href="#home" class="active">home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#work">experience</a></li>
+                <li><a href="#experience">education</a></li>
+                <li><a href="#portfolio">portfolio</a></li>
+                <li><a href="#skills">skills</a></li>
+                <li><a href="#references">references</a></li>
                 <li><a href="#contact">contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <section id="hero">
+    <section id="home">
         <div class="container">
-            <div class="hero-content">
+            <div class="home-content">
                 <div class="terminal-text">
-                    <p class="comment">// Bienvenue sur mon portfolio</p>
+                    <p class="comment">// Welcome to my portfolio</p>
                     <h1>Axel Bénard</h1>
-                    <p class="subtitle"><span class="keyword">const</span> role = <span class="string">"Développeur"</span>;</p>
+                    <p class="subtitle"><span class="keyword">const</span> role = <span class="string">"Developer"</span>;</p>
                 </div>
-                <p class="description">Étudiant en BUT Informatique passionné par le développement d'applications et les nouvelles technologies</p>
+                <p class="description">Second-year Computer Science student seeking an internship in industrial software development and automation. Passionate about data processing, task automation, and embedded systems.</p>
                 <div class="cta-buttons">
-                    <a href="#projects" class="btn">voir_mes_projets()</a>
-                    <a href="#contact" class="btn btn-outline">me_contacter()</a>
+                    <a href="CV_Benard_Axel.pdf" class="btn btn-outline" target="_blank">get_my_CV()</a>
+                    <a href="#contact" class="btn btn-outline">contact_me()</a>
                 </div>
             </div>
         </div>
@@ -48,19 +47,18 @@
 
     <section id="about">
         <div class="container">
-            <h2 class="section-title"><span class="comment">//</span> À propos</h2>
+            <h2 class="section-title"><span class="comment">//</span> About Me</h2>
             <div class="about-content">
                 <div class="about-text">
                     <div class="code-block">
                         <p class="code-line"><span class="keyword">class</span> <span class="class-name">Developer</span> {</p>
-                        <p class="code-line indent">  <span class="property">nom</span>: <span class="string">"Axel Bénard"</span>,</p>
-                        <p class="code-line indent">  <span class="property">âge</span>: <span class="number">20</span>,</p>
-                        <p class="code-line indent">  <span class="property">formation</span>: <span class="string">"BUT Informatique (2ème année)"</span>,</p>
-                        <p class="code-line indent">  <span class="property">langues</span>: [<span class="string">"Français"</span>, <span class="string">"Anglais (C1)"</span>, <span class="string">"Espagnol (B1)"</span>]</p>
+                        <p class="code-line indent">  <span class="property">name</span>: <span class="string">"Axel Bénard"</span>,</p>
+                        <p class="code-line indent">  <span class="property">age</span>: <span class="number">20</span>, <span class="comment">// Born 12 May 2005</span></p>
+                        <p class="code-line indent">  <span class="property">education</span>: <span class="string">"B.U.T. Computer Science (2nd year)"</span>,</p>
                         <p class="code-line">}</p>
                     </div>
-                    <p class="bio">Après une classe préparatoire MP2I, je me suis orienté vers un parcours plus pratique en BUT Informatique à l'IUT d'Annecy. Je m'intéresse particulièrement au développement d'applications et j'explore différents domaines de la programmation.</p>
-                    <p class="bio">Actuellement en recherche d'un stage de BUT2 pour approfondir mes compétences et découvrir le monde professionnel du développement.</p>
+                    <p class="bio">After a preparatory class (MP2I), I shifted to a more practical path in Computer Science at IUT Annecy. I am particularly interested in application development and exploring various programming fields.</p>
+                    <p class="bio">Currently looking for a 2nd-year internship to deepen my skills and discover the professional development world.</p>
                 </div>
                 <div class="info-grid">
                     <div class="info-item">
@@ -73,47 +71,24 @@
                     <div class="info-item">
                         <span class="icon">📱</span>
                         <div>
-                            <strong>Téléphone</strong>
-                            <p>07 68 73 50 59</p>
+                            <strong>Phone</strong>
+                            <p>+33 7 68 73 50 59</p>
                         </div>
                     </div>
                     <div class="info-item">
                         <span class="icon">💼</span>
                         <div>
                             <strong>LinkedIn</strong>
-                            <p><a href="https://linkedin.com/in/axel-bénard" target="_blank">@axel-bénard</a></p>
+                            <p><a href="https://linkedin.com/in/axel-bénard" target="_blank">linkedin.com/in/axel-bénard</a></p>
                         </div>
                     </div>
                     <div class="info-item">
                         <span class="icon">📍</span>
                         <div>
-                            <strong>Localisation</strong>
-                            <p>Annecy, France</p>
+                            <strong>Location</strong>
+                            <p>2 Allée des Gentianes, 74000 Annecy - France</p>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience">
-        <div class="container">
-            <h2 class="section-title"><span class="comment">//</span> Formation</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h3>BUT Informatique - 2ème année</h3>
-                    <p class="date">2024 - 2027 | IUT Annecy - Université Savoie Mont Blanc</p>
-                    <p>Parcours Réalisation d'applications : conception, développement, validation</p>
-                </div>
-                <div class="timeline-item">
-                    <h3>Classe Préparatoire MP2I</h3>
-                    <p class="date">2023 - 2024 | Lycée Berthollet, Annecy</p>
-                    <p>Formation intensive en mathématiques, physique et informatique</p>
-                </div>
-                <div class="timeline-item">
-                    <h3>Baccalauréat Général - Mention Bien</h3>
-                    <p class="date">2023</p>
-                    <p>Spécialités Mathématiques et NSI - Option Mathématiques Expertes</p>
                 </div>
             </div>
         </div>
@@ -121,34 +96,115 @@
 
     <section id="work">
         <div class="container">
-            <h2 class="section-title"><span class="comment">//</span> Expérience professionnelle</h2>
+            <h2 class="section-title"><span class="comment">//</span> Experience</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <h3>Projet Développement Logiciel - Pilot</h3>
-                    <p class="date">Décembre 2024 | Université Savoie Mont-Blanc</p>
-                    <p>Conception et développement d'un logiciel de gestion interne avec WPF (C#). Gestion complète du cycle de développement logiciel : diagrammes UML, conception de base de données et implémentation.</p>
+                    <h3>Fullstack & DevOps Developer - CUBE</h3>
+                    <p class="date">Oct 2025 - Present | Université Savoie Mont-Blanc</p>
+                    <p>
+                        Leading the development of a web platform using <strong>Laravel</strong> and <strong>PostgreSQL</strong>. 
+                        Responsible for Linux server administration (OVH) and managing the <strong>Agile SCRUM</strong> process via Azure DevOps.
+                    </p>
                 </div>
                 <div class="timeline-item">
-                    <h3>Organisation d'événement - Tournoi de Judo</h3>
-                    <p class="date">Mars 2019 | JCVA Judo Club, Arbent</p>
-                    <p>Organisation de la logistique d'un tournoi local : pesée des compétiteurs, planification des matchs, arbitrage.</p>
+                    <h3>.NET Software Engineer - Pilot</h3>
+                    <p class="date">May 2025 - June 2025 | Université Savoie Mont-Blanc</p>
+                    <p>
+                        Engineered a desktop management application using <strong>C# and WPF</strong>. 
+                        Handled the full software lifecycle, from database modeling (MCD/MLD) to architecture design and implementation.
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Seasonal Industrial Worker</h3>
+                    <p class="date">Summers 2024 & 2025 | Crit Intérim</p>
+                    <p>
+                        Developed professional rigor, adaptability to shift work, and strong teamwork skills in a fast-paced industrial production environment.
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Seasonal Waiter For USO - OyonnaxRugby</h3>
+                    <p class="date">Spring 2024 | Crit Intérim</p>
+                    <p>
+                        Delivered premium hosppitality service in the VIP boxes at Charles Mathon Stadium (Oyonnax). Developed strong customer relathionship skills and the ability to perform efficiently under pressure during major events.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects">
+    <section id="experience">
         <div class="container">
-            <h2 class="section-title"><span class="comment">//</span> Projets</h2>
+            <h2 class="section-title"><span class="comment">//</span> Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>B.U.T. in Computer Science - 2nd Year</h3>
+                    <p class="date">2024 - 2027 (Expected) | IUT Annecy - Université Savoie Mont Blanc</p>
+                    <p>Track: Application Development - design, development, validation</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Preparatory Class MP2I</h3>
+                    <p class="date">2023 - 2024 | Lycée Berthollet, Annecy</p>
+                    <p>Intensive training in mathematics, physics, and computer science</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>High School Diploma (Baccalauréat) - With Honors</h3>
+                    <p class="date">2023</p>
+                    <p>Specialties: Mathematics and Computer Science - Advanced Mathematics option</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="container">
+            <h2 class="section-title"><span class="comment">//</span> Portfolio</h2>
+            <input type="text" id="filter" name="filter" required placeholder="Search a word...">
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-header">
-                        <span class="project-icon">📦</span>
-                        <span class="project-date">Juin 2025</span>
-                        <span class="project-status completed">Terminé</span>
+                        <span class="project-icon">📂</span>
+                        <span class="project-date">November 2025</span>
+                        <span class="project-status">In Progress</span>
                     </div>
-                    <h3>Application WPF - Pilot</h3>
-                    <p>Développement d'une application desktop en C# avec .NET Framework. Conception UML complète, développement en équipe avec gestion de versions sur GitHub.</p>
+                    <h3>Portfolio</h3>
+                    <p>Design and development of a personal portfolio website using HTML/CSS/JS. Full project management, from initial UI/UX design to deployment and hosting configuration on an OVH server. Source code managed and versioned with GitHub.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">GitHub</span>
+                    </div>
+                    <div class="project-more">
+                        <a href="https://github.com/Xale01/xale01" class="view_more" target="_blank">view_more</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-icon">🌐</span>
+                        <span class="project-date">October 2025</span>
+                        <span class="project-status">In Progress</span>
+                    </div>
+                    <h3>Web Application - CUBE</h3>
+                    <p>Design and development of a web application in Laravel, with PGSQL database management. Complete UML design, GDPR documentation, and team development with Github.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Laravel</span>
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">UML</span>
+                        <span class="tech-tag">GDPR</span>
+                        <span class="tech-tag">GitHub</span>
+                    </div>
+                    <div class="project-more">
+                        <a href="./projects/cube.html" class="view_more">view_more</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-icon">📦</span>
+                        <span class="project-date">June 2025</span>
+                        <span class="project-status completed">Completed</span>
+                    </div>
+                    <h3>WPF Application - Pilot</h3>
+                    <p>Development of a desktop application in C# with .NET Framework. Complete UML design, team development with version control on GitHub.</p>
                     <div class="project-tech">
                         <span class="tech-tag">C#</span>
                         <span class="tech-tag">.NET</span>
@@ -156,51 +212,26 @@
                         <span class="tech-tag">UML</span>
                         <span class="tech-tag">GitHub</span>
                     </div>
-
-                    <div class="project-links">
-                        <a href="https://github.com/ForWarZz/Survival-Island" target="_blank" class="btn-link">
-                            voir_le_code()
-                        </a>
+                    <div class="project-more">
+                        <a href="./projects/pilot.html" class="view_more">view_more</a>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-header">
-                        <span class="project-icon">🌐</span>
-                        <span class="project-date">Octobre 2025</span>
-                        <span class="project-status">En cours</span>
+                        <span class="project-icon">🕹️</span>
+                        <span class="project-date">December 2024</span>
+                        <span class="project-status completed">Completed</span>
                     </div>
-                    <h3>Application Web - CUBE</h3>
-                    <p>Conception et développement d'une application web en Laravel, et gestion de base de donnée PGSQL. Conception UML complète, rédaction des RGPD, et développement en équipe avec Github.</p>
+                    <h3>WPF Game - Survival Island</h3>
+                    <p>Development of a "revisited" tower defense game using C# and WPF. Complete team project from design to implementation, based on a "Boat" theme requirement and managed with GitHub.</p>
                     <div class="project-tech">
-                        <span class="tech-tag">Laravel</span>
-                        <span class="tech-tag">SQL</span>
-                        <span class="tech-tag">UML</span>
-                        <span class="tech-tag">RGPD</span>
+                        <span class="tech-tag">WPF</span>
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">.NET</span>
                         <span class="tech-tag">GitHub</span>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/ForWarZz/SAE2.01_Pilot" target="_blank" class="btn-link">
-                            voir_le_code()
-                        </a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-header">
-                        <span class="project-icon">💼</span>
-                        <span class="project-date">Octobre 2025</span>
-                        <span class="project-status">En cours</span>
-                    </div>
-                    <h3>Portfolio Personnel</h3>
-                    <p>Création d'un portfolio moderne et interactif avec HTML, CSS et JavaScript. Design épuré avec animations fluides et interface responsive.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JavaScript</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="[LIEN VERS TON REPO GITHUB]" target="_blank" class="btn-link">
-                            voir_le_code()
-                        </a>
+                    <div class="project-more">
+                        <a href="./projects/survival_island.html" class="view_more">view_more</a>
                     </div>
                 </div>
             </div>
@@ -209,24 +240,247 @@
 
     <section id="skills">
         <div class="container">
-            <h2 class="section-title"><span class="comment">//</span> Compétences</h2>
+            <h2 class="section-title"><span class="comment">//</span> Skills</h2>
+
+            <h3 class="skills-subtitle"><span class="bracket">{</span> Technical Skills <span class="bracket">}</span></h3>
+
             <div class="skills-container">
-                <div class="code-block">
-                    <p class="code-line"><span class="comment">// Chargement des compétences...</span></p>
-                    <br>
-                    <p class="code-line"><span class="property">></span> dotnet add package <span class="string">Axel.Skills.DotNet</span></p>
-                    <p class="code-line"><span class="success">  ✓</span> <span class="text-primary">Ajout de :</span> C#, .NET, WPF, UML</p>
-                    <br>
-                    <p class="code-line"><span class="property">></span> npm install <span class="string">axel-skills-web</span></p>
-                    <p class="code-line"><span class="success">  ✓</span> <span class="text-primary">Ajout de :</span> HTML, CSS, JavaScript, PHP, WordPress</p>
-                    <br>
-                    <p class="code-line"><span class="property">></span> pip install <span class="string">axel-skills-other</span></p>
-                    <p class="code-line"><span class="success">  ✓</span> <span class="text-primary">Ajout de :</span> SQL, PostgreSQL, Python, C</p>
-                    <br>
-                    <p class="code-line"><span class="property">></span> git --version</p>
-                    <p class="code-line"><span class="success">  ✓</span> <span class="text-primary">Outil maîtrisé :</span> Git / GitHub</p>
-                    <br>
-                    <p class="code-line"><span class="keyword">Opérations terminées.</span></p>
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <div class="skill-name-container">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" class="skill-icon-img" alt="C#">
+                            <span class="skill-name">C# / .NET</span>
+                        </div>
+                    </div>
+                    <div class="skill-level-dots">
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+                 <div class="skill-item">
+                    <div class="skill-header">
+                        <div class="skill-name-container">
+                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows8/windows8-original.svg" class="skill-icon-img" alt="WPF">
+                            <span class="skill-name">WPF</span>
+                        </div>
+                    </div>
+                    <div class="skill-level-dots">
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <div class="skill-name-container">
+                           <span class="skill-emoji">📈</span>
+                            <span class="skill-name">UML</span>
+                        </div>
+                    </div>
+                    <div class="skill-level-dots">
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+                 <div class="skill-item">
+                    <div class="skill-header">
+                        <div class="skill-name-container">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" class="skill-icon-img" alt="HTML">
+                            <span class="skill-name">HTML</span>
+                        </div>
+                    </div>
+                    <div class="skill-level-dots">
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+                 <div class="skill-item">
+                    <div class="skill-header">
+                        <div class="skill-name-container">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" class="skill-icon-img" alt="CSS">
+                            <span class="skill-name">CSS</span>
+                        </div>
+                    </div>
+                    <div class="skill-level-dots">
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+                 <div class="skill-item">
+                    <div class="skill-header">
+                        <div class="skill-name-container">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" class="skill-icon-img" alt="JS">
+                            <span class="skill-name">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="skill-level-dots">
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                    </div>
+                </div>
+
+                 <div class="skill-item">
+                    <div class="skill-header">
+                        <div class="skill-name-container">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" class="skill-icon-img" alt="PHP">
+                            <span class="skill-name">PHP</span>
+                        </div>
+                    </div>
+                    <div class="skill-level-dots">
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+                 <div class="skill-item">
+                    <div class="skill-header">
+                        <div class="skill-name-container">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" class="skill-icon-img" alt="Linux">
+                            <span class="skill-name">Linux</span>
+                        </div>
+                    </div>
+                    <div class="skill-level-dots">
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+                 <div class="skill-item">
+                    <div class="skill-header">
+                        <div class="skill-name-container">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" class="skill-icon-img" alt="SQL">
+                            <span class="skill-name">PostgreSQL</span>
+                        </div>
+                    </div>
+                    <div class="skill-level-dots">
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                    </div>
+                </div>
+                 <div class="skill-item">
+                    <div class="skill-header">
+                        <div class="skill-name-container">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" class="skill-icon-img" alt="Python">
+                            <span class="skill-name">Python</span>
+                        </div>
+                    </div>
+                    <div class="skill-level-dots">
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                    </div>
+                </div>
+                 <div class="skill-item">
+                    <div class="skill-header">
+                        <div class="skill-name-container">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" class="skill-icon-img" alt="Git">
+                            <span class="skill-name">Git / GitHub</span>
+                        </div>
+                    </div>
+                    <div class="skill-level-dots">
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+                 <div class="skill-item">
+                    <div class="skill-header">
+                        <div class="skill-name-container">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" class="skill-icon-img" alt="C">
+                            <span class="skill-name">C</span>
+                        </div>
+                    </div>
+                    <div class="skill-level-dots">
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="skills-subtitle" style="margin-top: 60px;"><span class="bracket">{</span> Languages <span class="bracket">}</span></h3>
+            
+            <div class="language-container">
+                <div class="language-item">
+                     <div class="skill-name-container">
+                        <span class="skill-emoji">🇫🇷</span>
+                        <span class="language-name">French</span>
+                    </div>
+                    <span class="language-level">Native Speaker</span>
+                </div>
+                <div class="language-item">
+                    <div class="skill-name-container">
+                        <span class="skill-emoji">🇬🇧</span>
+                        <span class="language-name">English</span>
+                    </div>
+                    <span class="language-level">C1 - Advanced</span>
+                </div>
+                <div class="language-item">
+                    <div class="skill-name-container">
+                        <span class="skill-emoji">🇪🇸</span>
+                        <span class="language-name">Spanish</span>
+                    <span class="language-level">B1 - Intermediate</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="references">
+        <div class="container">
+            <h2 class="section-title"><span class="comment">//</span> References</h2>
+            
+            <div class="references-grid">
+                <div class="reference-item">
+                    <h3 class="ref-name">Luc DAMAS</h3>
+                    <p class="ref-role">Associate Professor</p>
+                    <p class="ref-location">University of Savoy / IUT Annecy</p>
+                    <a href="mailto:luc.damas@univ-smb.fr" class="ref-email">
+                        <span class="icon">✉️</span> luc.damas@univ-smb.fr
+                    </a>
+                </div>
+                <div class="reference-item">
+                    <h3 class="ref-name">Christophe LIN-KWONG-CHON</h3>
+                    <p class="ref-role">Associate Professor</p>
+                    <p class="ref-location">University of Savoy / IUT Annecy</p>
+                    <a href="mailto:christophe.lin-kwong-chon@univ-smb.fr" class="ref-email">
+                        <span class="icon">✉️</span> christophe.lin-kwong-chon@univ-smb.fr
+                    </a>
                 </div>
             </div>
         </div>
@@ -235,18 +489,62 @@
     <section id="contact">
         <div class="container">
             <h2 class="section-title"><span class="comment">//</span> Contact</h2>
-            <div class="contact-simple">
-                <div class="terminal-contact">
-                    <p class="code-line"><span class="keyword">function</span> <span class="function-name">getContact</span>() {</p>
-                    <p class="code-line indent">  <span class="keyword">return</span> {</p>
-                    <p class="code-line indent2">    email: <span class="string">"axel.benard@etu.univ-smb.fr"</span>,</p>
-                    <p class="code-line indent2">    phone: <span class="string">"07 68 73 50 59"</span>,</p>
-                    <p class="code-line indent2">    linkedin: <span class="string">"linkedin.com/in/axel-bénard"</span>,</p>
-                    <p class="code-line indent2">    location: <span class="string">"2 allée des Gentianes, 74000 Annecy - France"</span></p>
-                    <p class="code-line indent">  };</p>
-                    <p class="code-line">}</p>
+            <p style="color: var(--text-secondary); max-width: 800px; margin: -20px auto 40px; text-align: center;">
+                If you have any questions or opportunities to discuss, feel free to reach out to me using the form below or through my social media channels.
+            </p>
+            <div class="contact-layout">
+                <div class="contact-form">
+                    <h3>Send a Message</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" class="form-control" required placeholder="Name...">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" required placeholder="Email...">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" class="form-control" required placeholder="Message..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit" id="submit-btn">send_message()</button>
+                        <p id="form-status"></p>
+                    </form>
                 </div>
-                <p class="contact-message">N'hésitez pas à me contacter pour discuter d'opportunités de stage ou de collaboration !</p>
+                <div class="contact-details">
+                    <h3>Get in Touch</h3>
+                    <ul class="contact-details-list">
+                        <li>
+                            <span class="icon">📧</span>
+                            <div>
+                                <strong>Email</strong>
+                                <a href="mailto:axel.benard@etu.univ-smb.fr">axel.benard@etu.univ-smb.fr</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">📱</span>
+                            <div>
+                                <strong>Phone</strong>
+                                <p>+33 7 68 73 50 59</p>
+                            </div>
+                        </li>
+                         <li>
+                            <span class="icon">💼</span>
+                            <div>
+                                <strong>LinkedIn</strong>
+                                <a href="https://linkedin.com/in/axel-bénard" target="_blank">linkedin.com/in/axel-bénard</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">📍</span>
+                            <div>
+                                <strong>Address</strong>
+                                <p>2 allée des Gentianes, 74000 Annecy, France</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -254,10 +552,10 @@
     <footer>
         <div class="container">
             <p><span class="comment">// </span>© 2025 Axel Bénard</p>
-            <p>Étudiant BUT Informatique - IUT Annecy</p>
+            <p>Computer Science Student - USMB IUT Annecy</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="main.js" defer></script>
 </body>
 </html>

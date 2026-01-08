@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axel Bénard - Survival Island</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lien vers le CSS générique (remonte de 2 dossiers) -->
+    <link rel="stylesheet" href="project_details.css">
+</head>
+<body>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    
+    <nav class="project-nav">
+        <a href="../index.html#portfolio" class="back-link">&lt; return_to_portfolio()</a>
+    </nav>
+
+    <div class="main-wrapper">
+        <header class="project-header">
+            <h1>WPF Game - Survival Island</h1>
+            <div class="project-meta">
+                <span class="meta-tag">C#</span>
+                <span class="meta-tag">WPF</span>
+                <span class="meta-tag">Game Dev</span>
+                <span class="meta-status completed">Completed (Dec. 2024)</span>
+            </div>
+        </header>
+
+        <section id="topic">
+            <div class="container project-detail-container">
+                
+                <div class="project-intro">
+                    <div class="highlight-text">
+                        <p><span class="keyword">const</span> teamSize = <span class="number">3</span>;</p>
+                        <p><span class="keyword">const</span> theme = <span class="string">"Boat"</span>;</p>
+                        <p><span class="keyword">const</span> duration = <span class="string">"Nov - Dec 2024"</span>;</p>
+                    </div>
+                    <p class="intro-desc">
+                        Survival Island is a "revisited" tower defense game set in an open world. 
+                        You play as a boat defending your island against waves of pirate ships. 
+                        The project was developed during a themed academic challenge where we had to build a video game around the word "Boat".
+                    </p>
+                </div>
+
+                <div class="grid-layout">
+                    <div class="col-left">
+                        <div class="detail-block">
+                            <h2>Technical Architecture</h2>
+                            <p>
+                                Although <strong>WPF</strong> is typically used for desktop applications, we pushed its boundaries to create a 2D game engine. 
+                                We managed game loops, collision detection, and rendering entirely within the .NET framework environment.
+                            </p>
+                            <ul class="tech-list">
+                                <li><strong>Language:</strong> C# .NET</li>
+                                <li><strong>Engine:</strong> WPF (Canvas & Custom Game Loop)</li>
+                                <li><strong>Collaboration:</strong> GitHub (Source Control)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-right">
+                        <div class="detail-block">
+                            <h2>Game Concepts & Mechanics</h2>
+                            <p>
+                                Since there was no database or complex UML modeling required, the focus was entirely on <strong>gameplay mechanics</strong> and <strong>user experience</strong>.
+                            </p>
+                            <div class="tags-container">
+                                <span class="tech-tag">Tower Defense</span>
+                                <span class="tech-tag">Open World</span>
+                                <span class="tech-tag">Player Movement</span>
+                                <span class="tech-tag">Enemy AI</span>
+                                <span class="tech-tag">Wave System</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/ForWarZz/Survival-Island" target="_blank" class="btn-github">
+                        <span class="icon">📂</span> view_source_on_github()
+                    </a>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <script src="../main.js" defer></script>
+</body>
+</html>
